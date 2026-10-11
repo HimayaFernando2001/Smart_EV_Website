@@ -1,0 +1,2301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="IntelligentEV - Electric Vehicle Management System Using Artificial Intelligence and Machine Learning. Academic research project from the Sri Lanka Institute of Information Technology (SLIIT).">
+  <meta name="keywords"
+    content="Electric Vehicle, Battery SOH, Anomaly Detection, Machine Learning, RAG, SLIIT, IntelligentEV">
+  <meta name="author" content="Vidushan A.A.D.D.N, Dias N.T.B.P, Fernando C.T.H.H.D, Jayarathne W.T.D.K">
+  <title>IntelligentEV | Electric Vehicle Management System Using AI &amp; ML</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+
+
+  <!-- Sticky Main Navbar -->
+  <nav class="navbar" id="mainNavbar">
+    <div class="container">
+      <a href="#home" class="brand">
+        <img src="assets/images/smartev_logo.png" alt="SmartEV Logo" class="brand-logo-img">
+        <span class="brand-name">Smart<span class="brand-accent">EV</span></span>
+      </a>
+
+      <!-- Navigation Tabs (strictly adhering to Slide 8) -->
+      <ul class="nav-links" id="navMenu">
+        <li><a href="#home" class="nav-link active"><span>Home</span></a></li>
+        <li><a href="#domain" class="nav-link"><span>Domain</span></a></li>
+        <li><a href="#milestones" class="nav-link"><span>Milestones</span></a></li>
+        <li><a href="#documents" class="nav-link"><span>Documents</span></a></li>
+        <li><a href="#presentations" class="nav-link"><span>Presentations</span></a></li>
+        <li><a href="#about" class="nav-link"><span>About Us</span></a></li>
+        <li><a href="#contact" class="nav-link"><span>Contact Us</span></a></li>
+      </ul>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       SECTION 1: HOME
+       ======================================================================== -->
+  <section id="home">
+    <div class="container">
+
+      <!-- Hero Unit -->
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="section-tag">AI-Driven Mobility Research</div>
+          <h1>Electric Vehicle Management System Using <span class="hero-gradient-text">AI and Machine Learning</span>
+          </h1>
+          <p class="hero-subtitle">
+            An integrated four-part Mobile Decision-Support System (MDSS) delivering diagnostic anomaly detection,
+            multi-horizon battery health forecasting, intelligent charging optimization, and context-aware
+            conversational guidance.
+          </p>
+
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="#domain" class="btn btn-primary">
+              <span>Explore Research Domain</span>
+              <span>→</span>
+            </a>
+            <a href="#documents" class="btn btn-secondary">
+              <span>View Project Documents</span>
+              <span>📄</span>
+            </a>
+          </div>
+
+          <!-- Quick Research Highlights -->
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h3>99.9%</h3>
+              <p>SOH Prediction R²</p>
+            </div>
+            <div class="stat-item">
+              <h3>94.2%</h3>
+              <p>Route Optimization</p>
+            </div>
+            <div class="stat-item">
+              <h3>4-in-1</h3>
+              <p>Integrated MDSS</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-media-wrapper">
+            <img src="assets/images/Neon Smart Mobility EV Cityscape.png" alt="IntelligentEV In-Cockpit Telemetry and Holographic HUD"
+              class="hero-image" loading="eager">
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Abstract Card (Slide 9 Requirement) -->
+      <div class="abstract-box">
+        <div class="abstract-header">
+          <h2>
+            <span>📑</span>
+            <span>Research Abstract</span>
+          </h2>
+          <span class="abstract-badge">IEEE Publication Format</span>
+        </div>
+        <p class="abstract-text">
+          Electric Vehicles (EVs) are hampered by the issues of battery degradation, operational anomalies, range
+          estimation uncertainty, charging time and access to quality vehicle information. Current EV use frequently
+          involves independent use of functions like State of Charge (SOC) monitoring, location of charging stations,
+          and simple range estimation, without integrated predictive and personalized decision support. This research
+          introduces <strong>IntelligentEV</strong>, a four-part interconnected mobile decision-support system (MDSS)
+          based on Artificial Intelligence (AI). The first component identifies operational anomalies according to
+          vehicle parameters including battery voltage, current, temperature, motor state, speed, acceleration, charging
+          status, and power consumption. The second forecasts battery State of Health (SOH) degradation across 3, 6, and
+          12-month horizons and offers personalized battery protection suggestions. The third enables intelligent EV
+          mobility through dynamic range prediction, charging-station queue forecasting, route optimization,
+          charging-time estimation, and cost analysis. The fourth combines Retrieval-Augmented Generation (RAG), Large
+          Language Models (LLMs), and multimodal voice interaction for context-aware EV guidance.
+        </p>
+        <div class="keywords-row">
+          <span style="font-size:0.82rem; font-weight:700; color:#fff; margin-right:4px;">Keywords:</span>
+          <span class="keyword-tag">Electric Vehicles</span>
+          <span class="keyword-tag">Artificial Intelligence</span>
+          <span class="keyword-tag">Battery State of Health (SOH)</span>
+          <span class="keyword-tag">Operational Anomaly Detection</span>
+          <span class="keyword-tag">Charging &amp; Range Optimization</span>
+          <span class="keyword-tag">Retrieval-Augmented Generation (RAG)</span>
+        </div>
+      </div>
+
+      <!-- 4 Pillars Interactive Cards -->
+      <div class="section-header" style="margin-bottom:30px;">
+        <h2 class="section-title">Four Interconnected Research Pillars</h2>
+        <p class="section-subtitle">A holistic decision-support architecture bridging vehicle telematics and driver
+          actions.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pillar 1 -->
+        <div class="glass-card pillar-card p1">
+          <div class="pillar-icon-box">🛡️</div>
+          <h3 class="pillar-title">AI-Based EV Operational Anomaly Detection</h3>
+          <p class="pillar-desc">
+            Evaluates 9 electrical, thermal, motor, and power parameters concurrently using Isolation Forest, One-Class
+            SVM, and Deep Autoencoders to flag faults before severe failure.
+          </p>
+          <div class="pillar-metric">Normal: 0.08 | Critical: 0.96 Score</div>
+        </div>
+
+        <!-- Pillar 2 -->
+        <div class="glass-card pillar-card p2">
+          <div class="pillar-icon-box">🔋</div>
+          <h3 class="pillar-title">Adaptive Battery Health Prediction and Personalized Recommendation</h3>
+          <p class="pillar-desc">
+            Ensemble Random Forest &amp; XGBoost regression models forecasting SOH capacity loss over 3, 6, and 12
+            months with rule-based charging and driving habits recommendations.
+          </p>
+          <div class="pillar-metric">R² = 0.9997 (3M) | 0.9992 (12M)</div>
+        </div>
+
+        <!-- Pillar 3 -->
+        <div class="glass-card pillar-card p3">
+          <div class="pillar-icon-box">⚡</div>
+          <h3 class="pillar-title">Intelligent EV Charging Optimization and Range Prediction
+          </h3>
+          <p class="pillar-desc">
+            Hybrid LSTM range prediction, ARIMA-LSTM queue delay forecasting, spatial A*/Dijkstra route planning, and
+            CC-CV non-linear charging cost calculations.
+          </p>
+          <div class="pillar-metric">Range MAE: 3.05 km | Queue MAE: 2.4 min</div>
+        </div>
+
+        <!-- Pillar 4 -->
+        <div class="glass-card pillar-card p4">
+          <div class="pillar-icon-box">🎙️</div>
+          <h3 class="pillar-title">AI-Based EV Virtual Assistant</h3>
+          <p class="pillar-desc">
+            Dense Passage Retrieval (DPR) coupled with LLMs delivering multimodal voice and text guidance grounded
+            strictly in curated EV technical knowledge.
+          </p>
+          <div class="pillar-metric">Context-Aware Speech &amp; Text</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 2: DOMAIN
+       ======================================================================== -->
+  <section id="domain">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Research Foundations</div>
+        <h2 class="section-title">Research Domain &amp; Methodology</h2>
+        <p class="section-subtitle">
+          Comprehensive synthesis of literature, identified research gaps, project objectives, system architecture, and
+          technology framework.
+        </p>
+      </div>
+
+      <!-- Domain Navigation Sub-Tabs (Slide 10 Criteria) -->
+      <div class="domain-tabs">
+        <button class="domain-tab-btn active" data-tab="lit">1. Literature Survey</button>
+        <button class="domain-tab-btn" data-tab="gap">2. Research Gap &amp; Problem</button>
+        <button class="domain-tab-btn" data-tab="obj">3. Research Objectives</button>
+        <button class="domain-tab-btn" data-tab="method">4. Methodology &amp; Architecture</button>
+        <button class="domain-tab-btn" data-tab="tech">5. Technologies Used</button>
+        <button class="domain-tab-btn" data-tab="results">6. Benchmark Results</button>
+      </div>
+
+      <!-- Sub-Tab 1: Literature Survey -->
+      <div class="domain-pane active" id="tab-lit">
+        <div class="lit-grid">
+
+          <div class="glass-card lit-card">
+            <div class="lit-citation">
+              <span class="lit-author">Severson et al. (Nature Energy)</span>
+
+            </div>
+            <p class="lit-contribution">
+              Demonstrated that early battery cycle features are sufficient for machine learning models to forecast
+              battery cycle life before significant capacity degradation occurs.
+            </p>
+            <div class="lit-limitation">
+              Limitation: Focuses strictly on laboratory battery cycling without real-world telemetry integration or
+              driving recommendations.
+            </div>
+          </div>
+
+          <div class="glass-card lit-card">
+            <div class="lit-citation">
+              <span class="lit-author">Roman et al. &amp; Lu et al. (Nature Comms)</span>
+
+            </div>
+            <p class="lit-contribution">
+              Proposed charging voltage and current machine learning pipelines and deep domain adaptation for estimating
+              commercial lithium-ion SOH without invasive lab tests.
+            </p>
+            <div class="lit-limitation">
+              Limitation: Focused on single-instance SOH estimates rather than multi-horizon forecasts (3, 6, 12 months)
+              paired with user actions.
+            </div>
+          </div>
+
+          <div class="glass-card lit-card">
+            <div class="lit-citation">
+              <span class="lit-author">Liu et al., Schölkopf et al., Zhang et al.</span>
+
+            </div>
+            <p class="lit-contribution">
+              Introduced Isolation Forest, One-Class SVM, and interpretable deep autoencoders for detecting rare
+              operating outliers and battery faults with limited ground truth labels.
+            </p>
+            <div class="lit-limitation">
+              Limitation: Isolated fault detection without linking outputs to broader route planning, maintenance
+              workflows, or user advice.
+            </div>
+          </div>
+
+          <div class="glass-card lit-card">
+            <div class="lit-citation">
+              <span class="lit-author">Ma et al., Ma &amp; Faye, Houalef et al.</span>
+
+            </div>
+            <p class="lit-contribution">
+              Researched real-world driving factors (SOC, elevation), hybrid LSTM for station occupancy prediction, and
+              energy-aware personalized routing.
+            </p>
+            <div class="lit-limitation">
+              Limitation: Range prediction, queue forecasting, and charger selection are treated as separate silos
+              instead of an integrated mobile assistant.
+            </div>
+          </div>
+
+          <div class="glass-card lit-card" style="grid-column: span 2;">
+            <div class="lit-citation">
+              <span class="lit-author">Lewis et al. &amp; Karpukhin et al. (NeurIPS / EMNLP)</span>
+
+            </div>
+            <p class="lit-contribution">
+              Established Dense Passage Retrieval (DPR) and Retrieval-Augmented Generation (RAG) to ground LLM responses
+              in external technical knowledge, eliminating hallucination in specialized engineering domains.
+            </p>
+            <div class="lit-limitation">
+              Limitation: Lack of real-time vehicular contextual telemetry grounding in existing generic chatbots.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sub-Tab 2: Research Gap & Problem -->
+      <div class="domain-pane" id="tab-gap">
+        <div class="gap-grid">
+
+          <div class="glass-card gap-box">
+            <h3 style="color:var(--accent-rose);"><span>🔍</span> Research Gap</h3>
+            <ul class="gap-list">
+              <li><strong>Fragmented Ecosystem:</strong> EV drivers currently rely on 4-5 disparate applications for SOC
+                checking, station finders, navigation, and OBD-II diagnostics.</li>
+              <li><strong>Static Threshold Warnings:</strong> Existing systems use simplistic threshold alarms (e.g.
+                Temp &gt; 55°C) that fail to catch multi-parameter multivariate abnormalities.</li>
+              <li><strong>Absence of Multi-Horizon Forecasting:</strong> Battery tools only show today's SOC or current
+                SOH, lacking 3, 6, and 12-month degradation trajectories correlated with driving habits.</li>
+              <li><strong>Isolated Charging Decisions:</strong> Route planners rarely combine vehicle dynamic range,
+                real-time charger queue forecasts, and non-linear CC-CV charging tariffs together.</li>
+            </ul>
+          </div>
+
+          <div class="glass-card gap-box">
+            <h3 style="color:var(--accent-amber);"><span>⚠️</span> Research Problem Statement</h3>
+            <p style="color:#cbd5e1; margin-bottom:14px; font-size:0.95rem; line-height:1.7;">
+              With electric cars surpassing 25% of all new car sales globally by 2025, EV adoption is hindered by
+              battery degradation uncertainty, unexpected operational failures, charging station queue times, and lack
+              of accessible technical guidance.
+            </p>
+            <p style="color:#cbd5e1; font-size:0.95rem; line-height:1.7;">
+              Operating and environmental conditions degrade lithium-ion batteries, reducing driving capacity and
+              escalating life-cycle costs. Drivers lack an integrated decision-support tool that combines diagnostic
+              fault detection, multi-horizon health forecasting, intelligent journey planning, and conversational
+              guidance within one unified mobile environment.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sub-Tab 3: Research Objectives -->
+      <div class="domain-pane" id="tab-obj">
+        <div class="objectives-container">
+
+          <div class="main-objective-box">
+            <h3>🎯 Main Research Objective</h3>
+            <p style="color:#f8fafc; font-size:1.05rem; line-height:1.7;">
+              To develop, evaluate, and deploy <strong>IntelligentEV</strong>: an interconnected mobile decision-support
+              system (MDSS) powered by artificial intelligence and machine learning that unifies diagnostic fault
+              detection, multi-horizon battery health forecasting, intelligent charging optimization, and context-aware
+              conversational guidance in a single mobile application.
+            </p>
+          </div>
+
+          <div class="sub-objectives-grid">
+            <div class="glass-card sub-objective-card">
+              <h4>Objective 1: Operational Anomaly Detection</h4>
+              <p>Analyze 9 multi-dimensional vehicular parameters concurrently to detect electrical, thermal, motor,
+                charging, and power abnormalities using Isolation Forest, One-Class SVM, and Deep Autoencoders with
+                severity grading.</p>
+            </div>
+
+            <div class="glass-card sub-objective-card">
+              <h4>Objective 2: Adaptive SOH Health Forecasting</h4>
+              <p>Predict lithium-ion battery capacity degradation at 3, 6, and 12-month horizons using ensemble tree
+                regression and formulate personalized battery-care behavioral recommendations based on user charging
+                habits.</p>
+            </div>
+
+            <div class="glass-card sub-objective-card">
+              <h4>Objective 3: Charging &amp; Route Optimization</h4>
+              <p>Deliver real-time dynamic range prediction with hybrid LSTM, forecast station wait queues via
+                ARIMA-LSTM, perform multi-criteria A*/Dijkstra route planning, and estimate CC-CV charging time and
+                financial tariffs.</p>
+            </div>
+
+            <div class="glass-card sub-objective-card">
+              <h4>Objective 4: Conversational Virtual Assistant</h4>
+              <p>Build a multimodal voice and text assistant leveraging Retrieval-Augmented Generation (RAG) and Dense
+                Passage Retrieval grounded in an EV domain knowledge base to provide reliable advice without
+                hallucinations.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sub-Tab 4: Methodology & Architecture -->
+      <div class="domain-pane" id="tab-method">
+
+        <!-- Architecture Diagram Showcase Container -->
+        <div class="arch-showcase-container">
+
+          <!-- Top Control & Header Bar -->
+          <div class="arch-header-bar">
+            <div class="arch-header-info">
+              <span class="arch-badge"><span>⚡</span> System Architecture &amp; Methodology</span>
+
+            </div>
+
+          </div>
+
+          <!-- Architecture Diagram Display Frame -->
+          <div class="arch-frame" id="archFrame" title="Click to expand high-resolution view">
+            <img src="assets/images/IntelligentEV%20System%20Architecture%20Diagram.png"
+              alt="Architecture Diagram of the Proposed IntelligentEV System" class="arch-image" id="mainArchImg"
+              loading="eager">
+          </div>
+
+
+
+        </div>
+
+        <!-- Interactive Component Simulator -->
+        <div class="component-simulator-box">
+          <div class="sim-header">
+            <div>
+              <h3 style="color:#fff; font-size:1.2rem;">🔬 Interactive Component Demonstrator</h3>
+              <p style="color:var(--text-secondary); font-size:0.85rem;">Test and inspect the behavior and formulas of
+                the 4 research sub-systems.</p>
+            </div>
+            <div class="sim-nav">
+              <button class="sim-btn active" data-sim="anomaly">1. Anomaly Detector</button>
+              <button class="sim-btn" data-sim="soh">2. Battery SOH Engine</button>
+              <button class="sim-btn" data-sim="range">3. Range &amp; Queue</button>
+              <button class="sim-btn" data-sim="rag">4. RAG Assistant</button>
+            </div>
+          </div>
+
+          <!-- Simulator 1: Anomaly Detector -->
+          <div class="sim-content-pane active" id="sim-anomaly">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:center;">
+              <div>
+                <label style="font-size:0.85rem; color:#cbd5e1; display:block; margin-bottom:8px;">Select Real Vehicle
+                  Operating Telemetry Scenario:</label>
+                <select id="anomalyTestCase" class="form-control" style="margin-bottom:14px;">
+                  <option value="normal">Scenario A: Normal Standard Highway Cruising</option>
+                  <option value="charging">Scenario B: Fast Charging Electrical Overcurrent / Voltage Spike</option>
+                  <option value="motor">Scenario C: Motor Stator Thermal Surge with Elevated Auxiliary Load</option>
+                </select>
+                <p style="font-size:0.85rem; color:var(--text-muted);">
+                  The system evaluates 9 telemetry dimensions simultaneously: Voltage, Current, Battery Temp, Motor
+                  Temp, SOC, Speed, Accel, Charging State, and Power Consumption.
+                </p>
+              </div>
+
+              <div style="background:#0b1329; border:1px solid var(--border-color); border-radius:10px; padding:18px;">
+                <h4 style="color:var(--accent-cyan); font-size:0.95rem; margin-bottom:10px;">Diagnostic Output (Table I)
+                </h4>
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <span style="color:var(--text-secondary); font-size:0.85rem;">Anomaly Score:</span>
+                  <strong id="resAnomalyScore" style="color:#38bdf8; font-size:1.1rem;">0.08</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:6px;">
+                  <span style="color:var(--text-secondary); font-size:0.85rem;">Classification:</span>
+                  <strong id="resAnomalyClass" style="color:#10b981;">NORMAL</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+                  <span style="color:var(--text-secondary); font-size:0.85rem;">Severity Level:</span>
+                  <strong id="resAnomalySeverity" style="color:#10b981;">None</strong>
+                </div>
+                <div
+                  style="background:rgba(15,23,42,0.8); padding:10px; border-radius:6px; font-size:0.82rem; color:#cbd5e1;"
+                  id="resAnomalyAlert">
+                  All 9 electrical, thermal, and dynamic parameters operating within standard nominal envelopes.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator 2: Battery SOH Engine -->
+          <div class="sim-content-pane" id="sim-soh">
+            <p style="color:#cbd5e1; font-size:0.92rem; margin-bottom:14px;">
+              State of Health is mathematically formulated as:
+              <span
+                style="color:var(--accent-cyan); font-family:monospace; background:rgba(15,23,42,0.9); padding:4px 10px; border-radius:6px; margin:0 6px;">
+                SOH(%) = (C_current / C_rated) × 100
+              </span>
+            </p>
+            <p style="color:var(--text-secondary); font-size:0.88rem; margin-bottom:16px;">
+              Evaluated on public NCM (Nickel Cobalt Manganese) battery datasets. Random Forest Regression was selected
+              as the champion model across all three time horizons due to lowest error rates:
+            </p>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:14px; text-align:center;">
+              <div style="background:#0f172a; padding:16px; border-radius:10px; border:1px solid var(--border-color);">
+                <div style="color:var(--accent-cyan); font-size:0.85rem; font-weight:700;">3-Month Horizon</div>
+                <div style="font-size:1.4rem; font-weight:800; color:#34d399; margin:6px 0;">R² = 0.9997</div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">MAE: 0.0175 | RMSE: 0.0234</div>
+              </div>
+              <div style="background:#0f172a; padding:16px; border-radius:10px; border:1px solid var(--border-color);">
+                <div style="color:var(--accent-cyan); font-size:0.85rem; font-weight:700;">6-Month Horizon</div>
+                <div style="font-size:1.4rem; font-weight:800; color:#34d399; margin:6px 0;">R² = 0.9990</div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">MAE: 0.0282 | RMSE: 0.0394</div>
+              </div>
+              <div style="background:#0f172a; padding:16px; border-radius:10px; border:1px solid var(--border-color);">
+                <div style="color:var(--accent-cyan); font-size:0.85rem; font-weight:700;">12-Month Horizon</div>
+                <div style="font-size:1.4rem; font-weight:800; color:#34d399; margin:6px 0;">R² = 0.9992</div>
+                <div style="font-size:0.78rem; color:var(--text-muted);">MAE: 0.0247 | RMSE: 0.0299</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator 3: Range & Queue Engine -->
+          <div class="sim-content-pane" id="sim-range">
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:16px;">
+              <div style="background:#0f172a; padding:18px; border-radius:10px; border:1px solid var(--border-color);">
+                <h4 style="color:var(--accent-indigo); font-size:0.95rem; margin-bottom:8px;">🚗 Hybrid LSTM Range</h4>
+                <p style="font-size:0.82rem; color:#cbd5e1; margin-bottom:8px;">Dynamically incorporates elevation, HVAC
+                  auxiliary load, and real-time speed.</p>
+                <div style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">Validation MAE: 3.05 km</div>
+                <div style="color:var(--text-muted); font-size:0.8rem;">RMSE: 4.12 km</div>
+              </div>
+
+              <div style="background:#0f172a; padding:18px; border-radius:10px; border:1px solid var(--border-color);">
+                <h4 style="color:var(--accent-indigo); font-size:0.95rem; margin-bottom:8px;">⏱️ ARIMA-LSTM Queue</h4>
+                <p style="font-size:0.82rem; color:#cbd5e1; margin-bottom:8px;">Forecasts charging station bay occupancy
+                  and turnaround wait periods.</p>
+                <div style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">Wait Forecast MAE: 2.4 min
+                </div>
+                <div style="color:var(--text-muted); font-size:0.8rem;">Captures cyclical demand spikes</div>
+              </div>
+
+              <div style="background:#0f172a; padding:18px; border-radius:10px; border:1px solid var(--border-color);">
+                <h4 style="color:var(--accent-indigo); font-size:0.95rem; margin-bottom:8px;">⚡ CC-CV Charging &amp;
+                  Route</h4>
+                <p style="font-size:0.82rem; color:#cbd5e1; margin-bottom:8px;">A*/Dijkstra spatial network route
+                  optimization + CC-CV tariff model.</p>
+                <div style="color:var(--accent-cyan); font-weight:700; font-size:0.9rem;">Route Score: 94.2%</div>
+                <div style="color:var(--text-muted); font-size:0.8rem;">Cost score: 93.6% (±3.5 min margin)</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator 4: RAG Virtual Assistant -->
+          <div class="sim-content-pane" id="sim-rag">
+            <div style="display:flex; gap:12px; margin-bottom:14px;">
+              <input type="text" id="assistantQuery" class="form-control"
+                placeholder="Ask assistant (e.g. How to protect battery life? or How does range prediction work?)"
+                value="How to extend battery life?">
+              <button id="askAssistantBtn" class="btn btn-primary" style="flex-shrink:0;">Ask RAG</button>
+            </div>
+            <div id="assistantResponse"
+              style="background:#0b1329; border:1px solid var(--border-color); border-radius:10px; padding:16px; font-size:0.92rem; color:#e2e8f0; min-height:60px;">
+              <span style="color:#38bdf8; font-weight:bold;">Assistant Response:</span> Click 'Ask RAG' above to
+              simulate contextual query grounding in the EV research knowledge base.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Sub-Tab 5: Technologies Used -->
+      <div class="domain-pane" id="tab-tech">
+        <div class="tech-grid">
+
+          <div class="glass-card tech-category-card">
+            <h3 class="tech-cat-title"><span>🧠</span> Machine Learning</h3>
+            <div class="tech-tags">
+              <span class="tech-badge">Random Forest</span>
+              <span class="tech-badge">XGBoost Regression</span>
+              <span class="tech-badge">Isolation Forest</span>
+              <span class="tech-badge">One-Class SVM</span>
+              <span class="tech-badge">Scikit-Learn</span>
+            </div>
+          </div>
+
+          <div class="glass-card tech-category-card">
+            <h3 class="tech-cat-title"><span>⚡</span> Deep Learning &amp; Time-Series</h3>
+            <div class="tech-tags">
+              <span class="tech-badge">Deep Autoencoder</span>
+              <span class="tech-badge">Hybrid LSTM</span>
+              <span class="tech-badge">ARIMA-LSTM</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">TensorFlow</span>
+            </div>
+          </div>
+
+          <div class="glass-card tech-category-card">
+            <h3 class="tech-cat-title"><span>💬</span> Generative AI &amp; NLP</h3>
+            <div class="tech-tags">
+              <span class="tech-badge">Retrieval-Augmented Gen</span>
+              <span class="tech-badge">Dense Passage Retrieval</span>
+              <span class="tech-badge">Large Language Models</span>
+              <span class="tech-badge">Voice Recognition API</span>
+            </div>
+          </div>
+
+          <div class="glass-card tech-category-card">
+            <h3 class="tech-cat-title"><span>📱</span> Mobile &amp; Optimization</h3>
+            <div class="tech-tags">
+              <span class="tech-badge">Flutter / Dart MDSS</span>
+              <span class="tech-badge">FastAPI Backend</span>
+              <span class="tech-badge">A* / Dijkstra Routing</span>
+              <span class="tech-badge">CC-CV Charging Model</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Sub-Tab 6: Benchmark Results -->
+      <div class="domain-pane" id="tab-results">
+
+        <h3 style="color:#fff; font-size:1.15rem; margin-bottom:12px;">Table I: Operational Anomaly Detection Results
+        </h3>
+        <div class="results-table-wrapper" style="margin-bottom:30px;">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Operating Condition</th>
+                <th>Anomaly Score</th>
+                <th>Classification</th>
+                <th>Severity</th>
+                <th>Diagnostic Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Normal operation</strong></td>
+                <td>0.08</td>
+                <td><span style="color:#34d399; font-weight:700;">NORMAL</span></td>
+                <td>None</td>
+                <td>Parameters within nominal bounds</td>
+              </tr>
+              <tr>
+                <td><strong>Charging-system anomaly</strong></td>
+                <td>0.96</td>
+                <td><span style="color:#f87171; font-weight:700;">ABNORMAL</span></td>
+                <td><span style="color:#ef4444; font-weight:700;">CRITICAL</span></td>
+                <td>Overcurrent &amp; charging circuit thermal spike</td>
+              </tr>
+              <tr>
+                <td><strong>Motor/thermal anomaly</strong></td>
+                <td>0.91</td>
+                <td><span style="color:#f87171; font-weight:700;">ABNORMAL</span></td>
+                <td><span style="color:#fbbf24; font-weight:700;">HIGH</span></td>
+                <td>Motor stator temperature surge &amp; power discrepancy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="color:#fff; font-size:1.15rem; margin-bottom:12px;">Table II: Battery-Health SOH Model Comparison
+          (NCM Cells)</h3>
+        <div class="results-table-wrapper" style="margin-bottom:30px;">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Forecast Horizon</th>
+                <th>Model</th>
+                <th>MAE</th>
+                <th>RMSE</th>
+                <th>R² Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>3 Months</strong></td>
+                <td>Random Forest</td>
+                <td>0.017522</td>
+                <td>0.023360</td>
+                <td><strong>0.999720</strong></td>
+                <td><span class="badge-winner">Selected Model</span></td>
+              </tr>
+              <tr>
+                <td>3 Months</td>
+                <td>XGBoost</td>
+                <td>0.019656</td>
+                <td>0.026104</td>
+                <td>0.999651</td>
+                <td>Evaluated</td>
+              </tr>
+              <tr>
+                <td><strong>6 Months</strong></td>
+                <td>Random Forest</td>
+                <td>0.028245</td>
+                <td>0.039355</td>
+                <td><strong>0.998999</strong></td>
+                <td><span class="badge-winner">Selected Model</span></td>
+              </tr>
+              <tr>
+                <td>6 Months</td>
+                <td>XGBoost</td>
+                <td>0.030581</td>
+                <td>0.043160</td>
+                <td>0.998797</td>
+                <td>Evaluated</td>
+              </tr>
+              <tr>
+                <td><strong>12 Months</strong></td>
+                <td>Random Forest</td>
+                <td>0.024652</td>
+                <td>0.029916</td>
+                <td><strong>0.999170</strong></td>
+                <td><span class="badge-winner">Selected Model</span></td>
+              </tr>
+              <tr>
+                <td>12 Months</td>
+                <td>XGBoost</td>
+                <td>0.030834</td>
+                <td>0.036723</td>
+                <td>0.998749</td>
+                <td>Evaluated</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="color:#fff; font-size:1.15rem; margin-bottom:12px;">Table III: Charging and Mobility Component
+          Results</h3>
+        <div class="results-table-wrapper">
+          <table class="academic-table">
+            <thead>
+              <tr>
+                <th>Function</th>
+                <th>Evaluation Metric</th>
+                <th>Empirical Result</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Driving-range prediction</td>
+                <td>RMSE / MAE</td>
+                <td><strong>4.12 km / 3.05 km</strong></td>
+                <td>Hybrid LSTM with elevation &amp; HVAC aux power</td>
+              </tr>
+              <tr>
+                <td>Queue prediction</td>
+                <td>MAE</td>
+                <td><strong>2.4 min</strong></td>
+                <td>ARIMA-LSTM capturing temporal charging patterns</td>
+              </tr>
+              <tr>
+                <td>Route optimization</td>
+                <td>Performance Score</td>
+                <td><strong>94.2%</strong></td>
+                <td>A* and Dijkstra weighted spatial network</td>
+              </tr>
+              <tr>
+                <td>Charging-time/cost estimation</td>
+                <td>Performance Score</td>
+                <td><strong>93.6%</strong></td>
+                <td>CC-CV charging integration with electricity tariffs</td>
+              </tr>
+              <tr>
+                <td>Charging-time estimation</td>
+                <td>Variation Margin</td>
+                <td><strong>±3.5 min</strong></td>
+                <td>Accurate turnaround forecast</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 3: MILESTONES (Slide 11 Requirement: Details, Date, Marks, Dropdown)
+       ======================================================================== -->
+  <section id="milestones">
+    <div class="container">
+
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="timeline-section-tag">PROJECT JOURNEY</span>
+        <h2 class="timeline-section-title">Timeline Overview</h2>
+      </div>
+
+      <!-- Alternating Center Timeline Structure -->
+      <div class="timeline-overview-wrap" id="milestonesTimeline">
+
+        <!-- Milestone 1 (Left) -->
+        <div class="timeline-row left">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">March 15, 2026</span>
+            <h3 class="timeline-item-title">Proposal Report</h3>
+            <p class="timeline-item-desc">Submission of project proposal report.</p>
+            <div class="timeline-item-marks">Marks: <strong>6%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 6%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 2 (Right) -->
+        <div class="timeline-row right">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">March 16, 2026</span>
+            <h3 class="timeline-item-title">Proposal Presentation</h3>
+            <p class="timeline-item-desc">Initial presentation of the proposed system.</p>
+            <div class="timeline-item-marks">Marks: <strong>6%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 6%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 3 (Left) -->
+        <div class="timeline-row left">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">May 11, 2026</span>
+            <h3 class="timeline-item-title">Progress Presentation I (50%)</h3>
+            <p class="timeline-item-desc">Evaluation of 50% project completion.</p>
+            <div class="timeline-item-marks">Marks: <strong>15%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 15%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 4 (Right) -->
+        <div class="timeline-row right">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">August 31, 2026</span>
+            <h3 class="timeline-item-title">Progress Presentation II (90%)</h3>
+            <p class="timeline-item-desc">Evaluation of 90% completion with system demonstration.</p>
+            <div class="timeline-item-marks">Marks: <strong>18%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 18%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 5 (Left) -->
+        <div class="timeline-row left">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">October 11, 2026</span>
+            <h3 class="timeline-item-title">Website</h3>
+            <p class="timeline-item-desc">Submission and evaluation of project website.</p>
+            <div class="timeline-item-marks">Marks: <strong>2%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 2%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 6 (Right) -->
+        <div class="timeline-row right">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">October 14, 2026</span>
+            <h3 class="timeline-item-title">Final Checklist Submission</h3>
+            <p class="timeline-item-desc">Final checklist and readiness verification</p>
+            <div class="timeline-item-marks">Marks: <strong>2%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 2%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 7 (Left) -->
+        <div class="timeline-row left">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">October 19, 2026</span>
+            <h3 class="timeline-item-title">Final Presentation & Viva</h3>
+            <p class="timeline-item-desc">Final presentation and individual viva assessment.</p>
+            <div class="timeline-item-marks">Marks: <strong>20%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 20%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milestone 8 (Right) -->
+        <div class="timeline-row right">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">October 19, 2026</span>
+            <h3 class="timeline-item-title">Logbook &amp; Status Documents</h3>
+            <p class="timeline-item-desc">Submission of project logbook documenting progress.</p>
+            <div class="timeline-item-marks">Marks: <strong>2%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 2%;"></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="timeline-row left">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">October 23, 2026</span>
+            <h3 class="timeline-item-title">Research Paper</h3>
+            <p class="timeline-item-desc">Submission of research publication</p>
+            <div class="timeline-item-marks">Marks: <strong>10%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 10%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-row right">
+          <div class="timeline-dot-node"></div>
+          <div class="timeline-block-card">
+            <span class="timeline-date-pill">October 28, 2026</span>
+            <h3 class="timeline-item-title">Final Report</h3>
+            <p class="timeline-item-desc">Submission of group (15%) and individual (4%) reports.</p>
+            <div class="timeline-item-marks">Marks: <strong>19%</strong></div>
+            <div class="timeline-bar-track">
+              <div class="timeline-bar-fill" style="width: 19%;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 4: DOCUMENTS (Slide 12: Charter, Proposal, Checklists, Final)
+       ======================================================================== -->
+  <section id="documents">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Documentation Archive</div>
+        <h2 class="section-title">Research Documents Repository</h2>
+        <p class="section-subtitle">
+          Access all published academic reports, project charter, approval checklists, and specialized component
+          documents.
+        </p>
+      </div>
+
+      <div class="docs-grid">
+
+        <!-- Doc 1: Project Charter -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Project Charter</h3>
+
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad1" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad1" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad1)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad1)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/research_paper.pdf" target="_blank" rel="noopener noreferrer" class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Doc 2: Proposal Document -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Proposal Report-IT22157928</h3>
+
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad2" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad2" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad2)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad2)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/IT22157928 Research Proposal.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Doc 3: Check List Documents -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Proposal Report-IT22134080</h3>
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad3" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad3" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad3)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad3)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/_IT22134080 Research proposal_.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Doc 4: Final Integrated Thesis -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Proposal Report-IT22247490</h3>
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad4" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad4" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad4)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad4)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/IT22247490_Research_Proposal.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Doc 5: Component 1 & 2 Reports -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Proposal Report-IT22071170</h3>
+
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad5" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad5" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad5)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad5)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+            <div class="doc-meta-info">
+              <div class="doc-filename">Proposal_Report.pdf</div>
+
+            </div>
+          </div>
+
+          <a href="assets/pdf/IT22071170_Proposal Report.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Doc 6: Component 3 & 4 Reports -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Final Report (Group)</h3>
+
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad6" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad6" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad6)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad6)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+            <div class="doc-meta-info">
+              <div class="doc-filename">Final_Report_(Group).pdf</div>
+
+            </div>
+          </div>
+
+          <a href="assets/pdf/research_paper.pdf" target="_blank" rel="noopener noreferrer" class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+
+        </div>
+
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Final Report-IT22157928</h3>
+
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad2" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad2" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad2)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad2)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/IT22157928 Research Proposal.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Final Report - IT22134080 -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Final Report-IT22134080</h3>
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad7" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad7" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad7)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad7)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/_IT22134080 Research proposal_.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Final Report - IT22247490 -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Final Report-IT22247490</h3>
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad8" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad8" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad8)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad8)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/IT22247490_Research_Proposal.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Final Report - IT22071170 -->
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Final Report-IT22071170</h3>
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad9" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad9" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad9)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad9)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/IT22071170_Proposal Report.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 5: PRESENTATIONS (SLIDES)
+       ======================================================================== -->
+  <section id="presentations">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Presentation Slides</div>
+        <h2 class="section-title"> Presentations &amp; Slide Decks</h2>
+        
+      </div>
+
+      <div class="presentations-grid">
+
+        <!-- Presentation 1: Proposal Presentation -->
+        <div class="glass-card pres-card-horizontal">
+          <div class="pres-ambient-orb"></div>
+          <div class="pres-ambient-wave"></div>
+          <div class="pres-ambient-corner-bl"></div>
+
+          <div class="pres-icon-pod">
+            <div class="pres-pod-ambient-glow"></div>
+            <svg width="86" height="92" viewBox="0 0 86 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="pptShadow1" x="-10%" y="-10%" width="130%" height="130%">
+                  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3" />
+                </filter>
+                <linearGradient id="pptPaperGrad1" x1="0" y1="0" x2="86" y2="92" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="100%" stop-color="#f1f5f9" />
+                </linearGradient>
+                <linearGradient id="pptFoldGrad1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e2e8f0" />
+                  <stop offset="100%" stop-color="#cbd5e1" />
+                </linearGradient>
+                <filter id="pptTileShadow1" x="-20%" y="-20%" width="150%" height="150%">
+                  <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#c2410c" flood-opacity="0.55" />
+                </filter>
+                <linearGradient id="pptTileGrad1" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fb923c" />
+                  <stop offset="45%" stop-color="#ea580c" />
+                  <stop offset="100%" stop-color="#c2410c" />
+                </linearGradient>
+              </defs>
+              <g filter="url(#pptShadow1)">
+                <path d="M24 6 H64 L80 22 V78 C80 81.3 77.3 84 74 84 H24 C20.7 84 18 81.3 18 78 V12 C18 8.7 20.7 6 24 6 Z" fill="url(#pptPaperGrad1)" />
+                <path d="M64 6 V20 C64 21.1 64.9 22 66 22 H80 L64 6 Z" fill="url(#pptFoldGrad1)" />
+                <path d="M64 6 L80 22" stroke="rgba(0,0,0,0.06)" stroke-width="0.8" />
+              </g>
+              <rect x="50" y="34" width="20" height="3" rx="1.5" fill="#ea580c" />
+              <rect x="50" y="40" width="20" height="3" rx="1.5" fill="#f97316" />
+              <rect x="50" y="46" width="14" height="3" rx="1.5" fill="#fb923c" />
+              <g transform="translate(60, 63)">
+                <path d="M 0 0 L 0 -10 A 10 10 0 1 0 10 0 Z" fill="#ea580c" />
+                <path d="M 2 -2 L 11 -2 A 10 10 0 0 0 2 -11 Z" fill="#fb923c" />
+              </g>
+              <g filter="url(#pptTileShadow1)">
+                <rect x="4" y="24" width="44" height="44" rx="12" fill="url(#pptTileGrad1)" />
+                <rect x="5" y="25" width="42" height="42" rx="11" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" fill="none" />
+                <text x="26" y="56" font-family="'Segoe UI', 'Inter', system-ui, sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle">P</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="pres-body">
+            
+            <h3 class="pres-title">Proposal Presentation</h3>
+            <a href="https://docs.google.com/presentation/d/1ElXBCqYuefrvT9DcmhtFApLzxclpi7L-/edit?usp=drive_link&ouid=101675624250496847074&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="pres-view-btn" title="View Proposal Presentation on Google Drive">
+              <span class="btn-inner">
+                <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                <span>View</span>
+              </span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 2: Progress Presentation 1 -->
+        <div class="glass-card pres-card-horizontal">
+          <div class="pres-ambient-orb"></div>
+          <div class="pres-ambient-wave"></div>
+          <div class="pres-ambient-corner-bl"></div>
+
+          <div class="pres-icon-pod">
+            <div class="pres-pod-ambient-glow"></div>
+            <svg width="86" height="92" viewBox="0 0 86 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="pptShadow2" x="-10%" y="-10%" width="130%" height="130%">
+                  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3" />
+                </filter>
+                <linearGradient id="pptPaperGrad2" x1="0" y1="0" x2="86" y2="92" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="100%" stop-color="#f1f5f9" />
+                </linearGradient>
+                <linearGradient id="pptFoldGrad2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e2e8f0" />
+                  <stop offset="100%" stop-color="#cbd5e1" />
+                </linearGradient>
+                <filter id="pptTileShadow2" x="-20%" y="-20%" width="150%" height="150%">
+                  <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#c2410c" flood-opacity="0.55" />
+                </filter>
+                <linearGradient id="pptTileGrad2" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fb923c" />
+                  <stop offset="45%" stop-color="#ea580c" />
+                  <stop offset="100%" stop-color="#c2410c" />
+                </linearGradient>
+              </defs>
+              <g filter="url(#pptShadow2)">
+                <path d="M24 6 H64 L80 22 V78 C80 81.3 77.3 84 74 84 H24 C20.7 84 18 81.3 18 78 V12 C18 8.7 20.7 6 24 6 Z" fill="url(#pptPaperGrad2)" />
+                <path d="M64 6 V20 C64 21.1 64.9 22 66 22 H80 L64 6 Z" fill="url(#pptFoldGrad2)" />
+                <path d="M64 6 L80 22" stroke="rgba(0,0,0,0.06)" stroke-width="0.8" />
+              </g>
+              <rect x="50" y="34" width="20" height="3" rx="1.5" fill="#ea580c" />
+              <rect x="50" y="40" width="20" height="3" rx="1.5" fill="#f97316" />
+              <rect x="50" y="46" width="14" height="3" rx="1.5" fill="#fb923c" />
+              <g transform="translate(60, 63)">
+                <path d="M 0 0 L 0 -10 A 10 10 0 1 0 10 0 Z" fill="#ea580c" />
+                <path d="M 2 -2 L 11 -2 A 10 10 0 0 0 2 -11 Z" fill="#fb923c" />
+              </g>
+              <g filter="url(#pptTileShadow2)">
+                <rect x="4" y="24" width="44" height="44" rx="12" fill="url(#pptTileGrad2)" />
+                <rect x="5" y="25" width="42" height="42" rx="11" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" fill="none" />
+                <text x="26" y="56" font-family="'Segoe UI', 'Inter', system-ui, sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle">P</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="pres-body">
+            
+            <h3 class="pres-title">Progress Presentation 1</h3>
+            <a href="https://docs.google.com/presentation/d/1D1y9yozY-RmzgE9LUIerwhcFqtcITQfA/edit?usp=drive_link&ouid=101675624250496847074&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="pres-view-btn" title="View Progress Presentation 1 on Google Drive">
+              <span class="btn-inner">
+                <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                <span>View</span>
+              </span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 3: Progress Presentation 2 -->
+        <div class="glass-card pres-card-horizontal">
+          <div class="pres-ambient-orb"></div>
+          <div class="pres-ambient-wave"></div>
+          <div class="pres-ambient-corner-bl"></div>
+
+          <div class="pres-icon-pod">
+            <div class="pres-pod-ambient-glow"></div>
+            <svg width="86" height="92" viewBox="0 0 86 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="pptShadow3" x="-10%" y="-10%" width="130%" height="130%">
+                  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3" />
+                </filter>
+                <linearGradient id="pptPaperGrad3" x1="0" y1="0" x2="86" y2="92" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="100%" stop-color="#f1f5f9" />
+                </linearGradient>
+                <linearGradient id="pptFoldGrad3" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e2e8f0" />
+                  <stop offset="100%" stop-color="#cbd5e1" />
+                </linearGradient>
+                <filter id="pptTileShadow3" x="-20%" y="-20%" width="150%" height="150%">
+                  <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#c2410c" flood-opacity="0.55" />
+                </filter>
+                <linearGradient id="pptTileGrad3" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fb923c" />
+                  <stop offset="45%" stop-color="#ea580c" />
+                  <stop offset="100%" stop-color="#c2410c" />
+                </linearGradient>
+              </defs>
+              <g filter="url(#pptShadow3)">
+                <path d="M24 6 H64 L80 22 V78 C80 81.3 77.3 84 74 84 H24 C20.7 84 18 81.3 18 78 V12 C18 8.7 20.7 6 24 6 Z" fill="url(#pptPaperGrad3)" />
+                <path d="M64 6 V20 C64 21.1 64.9 22 66 22 H80 L64 6 Z" fill="url(#pptFoldGrad3)" />
+                <path d="M64 6 L80 22" stroke="rgba(0,0,0,0.06)" stroke-width="0.8" />
+              </g>
+              <rect x="50" y="34" width="20" height="3" rx="1.5" fill="#ea580c" />
+              <rect x="50" y="40" width="20" height="3" rx="1.5" fill="#f97316" />
+              <rect x="50" y="46" width="14" height="3" rx="1.5" fill="#fb923c" />
+              <g transform="translate(60, 63)">
+                <path d="M 0 0 L 0 -10 A 10 10 0 1 0 10 0 Z" fill="#ea580c" />
+                <path d="M 2 -2 L 11 -2 A 10 10 0 0 0 2 -11 Z" fill="#fb923c" />
+              </g>
+              <g filter="url(#pptTileShadow3)">
+                <rect x="4" y="24" width="44" height="44" rx="12" fill="url(#pptTileGrad3)" />
+                <rect x="5" y="25" width="42" height="42" rx="11" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" fill="none" />
+                <text x="26" y="56" font-family="'Segoe UI', 'Inter', system-ui, sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle">P</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="pres-body">
+            
+            <h3 class="pres-title">Progress Presentation 2</h3>
+            <a href="https://docs.google.com/presentation/d/1yGueLp1mVZYbjSEQRfDQBD26PMH2agai/edit?usp=drive_link&ouid=101675624250496847074&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="pres-view-btn" title="View Progress Presentation 2 on Google Drive">
+              <span class="btn-inner">
+                <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                <span>View</span>
+              </span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Presentation 4: Final Assessment -->
+        <div class="glass-card pres-card-horizontal">
+          <div class="pres-ambient-orb"></div>
+          <div class="pres-ambient-wave"></div>
+          <div class="pres-ambient-corner-bl"></div>
+
+          <div class="pres-icon-pod">
+            <div class="pres-pod-ambient-glow"></div>
+            <svg width="86" height="92" viewBox="0 0 86 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="pptShadow4" x="-10%" y="-10%" width="130%" height="130%">
+                  <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.3" />
+                </filter>
+                <linearGradient id="pptPaperGrad4" x1="0" y1="0" x2="86" y2="92" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#ffffff" />
+                  <stop offset="100%" stop-color="#f1f5f9" />
+                </linearGradient>
+                <linearGradient id="pptFoldGrad4" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e2e8f0" />
+                  <stop offset="100%" stop-color="#cbd5e1" />
+                </linearGradient>
+                <filter id="pptTileShadow4" x="-20%" y="-20%" width="150%" height="150%">
+                  <feDropShadow dx="0" dy="7" stdDeviation="6" flood-color="#c2410c" flood-opacity="0.55" />
+                </filter>
+                <linearGradient id="pptTileGrad4" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#fb923c" />
+                  <stop offset="45%" stop-color="#ea580c" />
+                  <stop offset="100%" stop-color="#c2410c" />
+                </linearGradient>
+              </defs>
+              <g filter="url(#pptShadow4)">
+                <path d="M24 6 H64 L80 22 V78 C80 81.3 77.3 84 74 84 H24 C20.7 84 18 81.3 18 78 V12 C18 8.7 20.7 6 24 6 Z" fill="url(#pptPaperGrad4)" />
+                <path d="M64 6 V20 C64 21.1 64.9 22 66 22 H80 L64 6 Z" fill="url(#pptFoldGrad4)" />
+                <path d="M64 6 L80 22" stroke="rgba(0,0,0,0.06)" stroke-width="0.8" />
+              </g>
+              <rect x="50" y="34" width="20" height="3" rx="1.5" fill="#ea580c" />
+              <rect x="50" y="40" width="20" height="3" rx="1.5" fill="#f97316" />
+              <rect x="50" y="46" width="14" height="3" rx="1.5" fill="#fb923c" />
+              <g transform="translate(60, 63)">
+                <path d="M 0 0 L 0 -10 A 10 10 0 1 0 10 0 Z" fill="#ea580c" />
+                <path d="M 2 -2 L 11 -2 A 10 10 0 0 0 2 -11 Z" fill="#fb923c" />
+              </g>
+              <g filter="url(#pptTileShadow4)">
+                <rect x="4" y="24" width="44" height="44" rx="12" fill="url(#pptTileGrad4)" />
+                <rect x="5" y="25" width="42" height="42" rx="11" stroke="rgba(255,255,255,0.35)" stroke-width="1.2" fill="none" />
+                <text x="26" y="56" font-family="'Segoe UI', 'Inter', system-ui, sans-serif" font-weight="800" font-size="28" fill="#ffffff" text-anchor="middle">P</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="pres-body">
+            
+            <h3 class="pres-title">Final Presentation</h3>
+            <a href="https://docs.google.com/presentation/d/1yGueLp1mVZYbjSEQRfDQBD26PMH2agai/edit?usp=drive_link&ouid=101675624250496847074&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="pres-view-btn" title="View Final Presentation on Google Drive">
+              <span class="btn-inner">
+                <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                <span>View</span>
+              </span>
+              <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 6: ABOUT US (Slide 14: Members, IDs, Photos, Emails, Supervisors)
+       ======================================================================== -->
+  <section id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Research Team</div>
+        <h2 class="section-title">About Our Research Group</h2>
+        <p class="section-subtitle">
+          Undergraduate researchers and academic supervisors from the Department of Information Technology at SLIIT.
+        </p>
+      </div>
+
+      <!-- Project Identification Overview Card -->
+      <div class="project-info-card" style="margin-bottom: 40px;">
+        <div class="project-info-header">OFFICIAL PROJECT IDENTIFICATION</div>
+        <div class="project-info-grid">
+          <div class="project-info-item">
+            <span class="project-info-label">PROJECT ID</span>
+            <span class="project-info-value highlight">R26-IT-029</span>
+          </div>
+
+          <div class="project-info-item">
+            <span class="project-info-label">RESEARCH AREA</span>
+            <span class="project-info-value">AI &amp; IoT in Precision Agriculture</span>
+          </div>
+
+          <div class="project-info-item">
+            <span class="project-info-label">INSTITUTION</span>
+            <span class="project-info-value">SLIIT Faculty of Computing</span>
+          </div>
+
+          <div class="project-info-item">
+            <span class="project-info-label">ACADEMIC YEAR</span>
+            <span class="project-info-value highlight">2025 / 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Student Researchers -->
+      <h3 class="subheading-category"><span>👥</span> Student Researchers</h3>
+      <div class="team-grid">
+
+        <!-- Member 1 -->
+        <div class="glass-card member-card">
+          <div class="member-avatar">
+            <img src="assets/images/member_vidushan.jpeg" alt="Vidushan A.A.D.D.N" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Vidushan A.A.D.D.N</h4>
+            <span class="member-id">IT22157928</span>
+            <p class="member-role">
+              <strong>Lead Component:</strong> AI-Based EV Operational Anomaly Detection
+            </p>
+            <a href="mailto:IT22157928@my.sliit.lk" class="member-email">IT22157928@my.sliit.lk</a>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="glass-card member-card">
+          <div class="member-avatar">
+            <img src="assets/images/member_dias.jpeg" alt="Dias N.T.B.P" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Dias N.T.B.P</h4>
+            <span class="member-id">IT22134080</span>
+            <p class="member-role">
+              <strong>Lead Component:</strong> Intelligent EV Charging Optimization and Range Prediction
+            </p>
+            <a href="mailto:IT22134080@my.sliit.lk" class="member-email">IT22134080@my.sliit.lk</a>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="glass-card member-card">
+          <div class="member-avatar">
+            <img src="assets/images/member_fernando.png" alt="Fernando C.T.H.H.D" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Fernando C.T.H.H.D</h4>
+            <span class="member-id">IT22247490</span>
+            <p class="member-role">
+              <strong>Lead Component:</strong> Adaptive Battery Health Prediction and Personalized Recommendation
+            </p>
+            <a href="mailto:IT22247490@my.sliit.lk" class="member-email">IT22247490@my.sliit.lk</a>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="glass-card member-card">
+          <div class="member-avatar">
+            <img src="assets/images/member_jayarathne.jpeg" alt="Jayarathne W.T.D.K" loading="lazy">
+          </div>
+          <div class="member-info">
+            <h4 class="member-name">Jayarathne W.T.D.K</h4>
+            <span class="member-id">IT22071170</span>
+            <p class="member-role">
+              <strong>Lead Component:</strong> AI-Based EV Virtual Assistant
+            </p>
+            <a href="mailto:IT22071170@my.sliit.lk" class="member-email">IT22071170@my.sliit.lk</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Supervisors -->
+      <h3 class="subheading-category"><span>🎓</span> Academic Supervisory Panel</h3>
+      <div class="supervisors-grid">
+
+        <div class="glass-card supervisor-card">
+          <div class="supervisor-avatar">
+            <img src="assets/images/uthpalas_20260426_1777219182.jpeg" alt="Ms. Uthpala Samarakoon" loading="lazy">
+          </div>
+          <div class="supervisor-info">
+            <h4>Ms. Uthpala Samarakoon</h4>
+            <div class="supervisor-role">Research Supervisor</div>
+            <div class="supervisor-dept">Department of Information Technology, SLIIT</div>
+            <a href="mailto:uthpala.s@sliit.lk"
+              style="font-size:0.85rem; color:var(--accent-cyan);">uthpala.s@sliit.lk</a>
+          </div>
+        </div>
+
+        <div class="glass-card supervisor-card">
+          <div class="supervisor-avatar">
+            <img src="assets/images/neluma_20260426_1777219196.jpeg" alt="Mr. Nelum Chathuranga" loading="lazy">
+          </div>
+          <div class="supervisor-info">
+            <h4>Mr. Nelum Chathuranga</h4>
+            <div class="supervisor-role">Co-Supervisor</div>
+            <div class="supervisor-dept">Department of Information Technology, SLIIT</div>
+            <a href="mailto:nelum.a@sliit.lk" style="font-size:0.85rem; color:var(--accent-cyan);">nelum.a@sliit.lk</a>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SECTION 7: CONTACT US (Slide 15: Contacts, Emails, Form Template)
+       ======================================================================== -->
+  <section id="contact">
+    <div class="container">
+
+      <div class="section-header">
+        <div class="section-tag">Get In Touch</div>
+        <h2 class="section-title">Contact Research Group</h2>
+        <p class="section-subtitle">
+          Inquire about the IntelligentEV architecture, datasets, or academic collaboration.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Information Panel -->
+        <div class="contact-info-panel">
+
+          <!-- Institution Address -->
+          <div class="glass-card contact-item-card">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <h4>Institution Address</h4>
+              <p>Department of Information Technology<br>
+                Sri Lanka Institute of Information Technology (SLIIT)<br>
+                New Kandy Road, Malabe, Sri Lanka</p>
+            </div>
+          </div>
+
+          <!-- Research Email -->
+          <div class="glass-card contact-item-card">
+            <div class="contact-icon">📧</div>
+            <div class="contact-text">
+              <h4>Research Lead Contact</h4>
+              <p>
+                General Lead: <a href="mailto:IT22157928@my.sliit.lk">IT22157928@my.sliit.lk</a><br>
+                Supervisor: <a href="mailto:uthpala.s@sliit.lk">uthpala.s@sliit.lk</a><br>
+                Co-Supervisor: <a href="mailto:nelum.a@sliit.lk">nelum.a@sliit.lk</a>
+              </p>
+            </div>
+          </div>
+
+          <!-- Research Area Tags -->
+          <div class="glass-card contact-item-card">
+            <div class="contact-icon">🔬</div>
+            <div class="contact-text">
+              <h4>Research Topics</h4>
+              <div class="contact-tags">
+                <span class="ctag">Anomaly Detection</span>
+                <span class="ctag">Battery SOH</span>
+                <span class="ctag">Range Prediction</span>
+                <span class="ctag">RAG AI Assistant</span>
+                <span class="ctag">EV Analytics</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact Form (Slide 15 General Email Template) -->
+
+        <div class="glass-card contact-form-card">
+          <h3 style="color:#fff; font-size:1.25rem; margin-bottom:18px;">Send an Academic Inquiry</h3>
+
+          <form id="projectContactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="senderName" class="form-label">Your Name</label>
+                <input type="text" id="senderName" class="form-control" placeholder="Nimal Sirisena" required>
+              </div>
+              <div class="form-group">
+                <label for="senderEmail" class="form-label">Email Address</label>
+                <input type="email" id="senderEmail" class="form-control" placeholder="name@institution.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="emailSubject" class="form-label">Subject / Topic</label>
+              <input type="text" id="emailSubject" class="form-control"
+                placeholder="e.g. IntelligentEV Dataset / Research Question" required>
+            </div>
+
+            <div class="form-group">
+              <label for="emailBody" class="form-label">Message Content</label>
+              <textarea id="emailBody" class="form-control" rows="4"
+                placeholder="Detail your query regarding Anomaly Detection, Battery SOH, Range, or RAG Virtual Assistant..."
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%;">
+              <span>Submit Research Inquiry</span>
+              <span>✉️</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="assets/images/smartev_logo.png" alt="SmartEV Logo" class="brand-logo-img">
+            <span class="brand-name">Smart<span class="brand-accent">EV</span></span>
+          </div>
+          <p>
+            An AI and Machine Learning-Based Mobile Decision-Support System for Electric Vehicle Management. Department
+            of Information Technology, SLIIT.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#domain">Domain &amp; Methodology</a></li>
+            <li><a href="#milestones">Assessment Milestones</a></li>
+            <li><a href="#documents">Research Documents</a></li>
+            <li><a href="#presentations">Presentations</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Contact & Institution -->
+        <div class="footer-links">
+          <h4>Contact &amp; Institution</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <span class="footer-contact-icon">📍</span>
+              <span>Dept. of Information Technology,<br>SLIIT, Malabe, Sri Lanka</span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">📧</span>
+              <a href="mailto:IT22157928@my.sliit.lk">IT22157928@my.sliit.lk</a>
+            </li>
+            <li>
+              <span class="footer-contact-icon">🎓</span>
+              <span>Supervisor: <a href="mailto:uthpala.s@sliit.lk">uthpala.s@sliit.lk</a></span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">🎓</span>
+              <span>Co-Supervisor: <a href="mailto:nelum.a@sliit.lk">nelum.a@sliit.lk</a></span>
+            </li>
+            <li>
+              <span class="footer-contact-icon">🌐</span>
+              <span>SLIIT &bull; Faculty of Computing</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <span style="color:var(--accent-cyan); font-weight:600;">SmartEV</span> Research Group &mdash;
+          Department of Information Technology, SLIIT. All Rights Reserved.</div>
+        <a href="#home" class="footer-back-top" title="Back to top">&#8679; Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Overlay for Documents / Slides Previews -->
+  <div class="modal-overlay" id="docModalOverlay">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Modal">&times;</button>
+      <span id="modalCategory"
+        style="font-size:0.78rem; text-transform:uppercase; letter-spacing:1px; color:var(--accent-cyan); font-weight:700;">Category</span>
+      <h3 id="modalTitle" style="color:#fff; font-size:1.35rem; margin:8px 0 16px 0;">Document Title</h3>
+      <div id="modalBody" style="line-height:1.7;">
+        <!-- Dynamic Modal Content populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- High-Resolution Architecture Lightbox Modal -->
+  <div class="arch-modal-overlay" id="archModalOverlay">
+    <div class="arch-modal-box">
+      <div class="arch-modal-header">
+        <div class="arch-modal-title">
+          <span>⚡</span> Architecture Diagram of the Proposed IntelligentEV System
+        </div>
+        <div class="arch-modal-tools">
+          <button class="arch-tool-btn" id="archZoomIn" title="Zoom In">🔍 + Zoom In</button>
+          <button class="arch-tool-btn" id="archZoomOut" title="Zoom Out">🔍 − Zoom Out</button>
+          <button class="arch-tool-btn" id="archZoomReset" title="Reset Scale">Reset (100%)</button>
+          <a href="assets/images/IntelligentEV%20System%20Architecture%20Diagram.png"
+            download="IntelligentEV_System_Architecture_Diagram.png" class="arch-tool-btn" style="text-decoration:none;"
+            title="Download HD">📥 Download</a>
+          <button class="arch-modal-close" id="archModalClose" aria-label="Close Lightbox">&times;</button>
+        </div>
+      </div>
+      <div class="arch-modal-body" id="archModalBody">
+        <div class="arch-zoom-container" id="archZoomContainer">
+          <img src="assets/images/IntelligentEV%20System%20Architecture%20Diagram.png"
+            alt="IntelligentEV Architecture Diagram Fullscreen" id="archModalImage">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback Toast Notification -->
+  <div class="toast-box" id="toastNotification">Notification</div>
+  <!-- Core JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
