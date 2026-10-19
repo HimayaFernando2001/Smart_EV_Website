@@ -223,85 +223,242 @@
       </div>
 
       <!-- Sub-Tab 1: Literature Survey -->
-      <div class="domain-pane active" id="tab-lit">
-        <div class="lit-grid">
+      
+<div class="domain-pane active" id="tab-lit">
+  <div class="lit-grid">
 
-          <div class="glass-card lit-card">
-            <div class="lit-citation">
-              <span class="lit-author">Severson et al. (Nature Energy)</span>
-
-            </div>
-            <p class="lit-contribution">
-              Demonstrated that early battery cycle features are sufficient for machine learning models to forecast
-              battery cycle life before significant capacity degradation occurs.
-            </p>
-            <div class="lit-limitation">
-              Limitation: Focuses strictly on laboratory battery cycling without real-world telemetry integration or
-              driving recommendations.
-            </div>
-          </div>
-
-          <div class="glass-card lit-card">
-            <div class="lit-citation">
-              <span class="lit-author">Roman et al. &amp; Lu et al. (Nature Comms)</span>
-
-            </div>
-            <p class="lit-contribution">
-              Proposed charging voltage and current machine learning pipelines and deep domain adaptation for estimating
-              commercial lithium-ion SOH without invasive lab tests.
-            </p>
-            <div class="lit-limitation">
-              Limitation: Focused on single-instance SOH estimates rather than multi-horizon forecasts (3, 6, 12 months)
-              paired with user actions.
-            </div>
-          </div>
-
-          <div class="glass-card lit-card">
-            <div class="lit-citation">
-              <span class="lit-author">Liu et al., Schölkopf et al., Zhang et al.</span>
-
-            </div>
-            <p class="lit-contribution">
-              Introduced Isolation Forest, One-Class SVM, and interpretable deep autoencoders for detecting rare
-              operating outliers and battery faults with limited ground truth labels.
-            </p>
-            <div class="lit-limitation">
-              Limitation: Isolated fault detection without linking outputs to broader route planning, maintenance
-              workflows, or user advice.
-            </div>
-          </div>
-
-          <div class="glass-card lit-card">
-            <div class="lit-citation">
-              <span class="lit-author">Ma et al., Ma &amp; Faye, Houalef et al.</span>
-
-            </div>
-            <p class="lit-contribution">
-              Researched real-world driving factors (SOC, elevation), hybrid LSTM for station occupancy prediction, and
-              energy-aware personalized routing.
-            </p>
-            <div class="lit-limitation">
-              Limitation: Range prediction, queue forecasting, and charger selection are treated as separate silos
-              instead of an integrated mobile assistant.
-            </div>
-          </div>
-
-          <div class="glass-card lit-card" style="grid-column: span 2;">
-            <div class="lit-citation">
-              <span class="lit-author">Lewis et al. &amp; Karpukhin et al. (NeurIPS / EMNLP)</span>
-
-            </div>
-            <p class="lit-contribution">
-              Established Dense Passage Retrieval (DPR) and Retrieval-Augmented Generation (RAG) to ground LLM responses
-              in external technical knowledge, eliminating hallucination in specialized engineering domains.
-            </p>
-            <div class="lit-limitation">
-              Limitation: Lack of real-time vehicular contextual telemetry grounding in existing generic chatbots.
-            </div>
-          </div>
-
-        </div>
+    <!-- 1. Battery Cycle Life Prediction -->
+    <div class="glass-card lit-card">
+      <div class="lit-citation">
+        <span class="lit-author">
+          Severson et al. [1] — Nature Energy
+        </span>
       </div>
+
+      <p class="lit-contribution">
+        Demonstrated that early battery cycle features can
+        predict battery cycle life using machine learning
+        before significant capacity degradation occurs.
+      </p>
+
+      <div class="lit-limitation">
+        Limitation: Focuses on laboratory battery cycling
+        without real-world driving telemetry integration
+        or personalized recommendations.
+      </div>
+
+      <div class="lit-ieee">
+        [1] K. A. Severson et al.,
+        "Data-driven prediction of battery cycle life
+        before capacity degradation,"
+        <em>Nature Energy</em>, vol. 4, no. 5,
+        pp. 383–391, 2019.
+        <a href="https://doi.org/10.1038/s41560-019-0356-8"
+           target="_blank" rel="noopener noreferrer">
+          DOI
+        </a>
+      </div>
+    </div>
+
+
+    <!-- 2. Battery SOH Estimation -->
+    <div class="glass-card lit-card">
+      <div class="lit-citation">
+        <span class="lit-author">
+          Roman et al. [2] &amp; Lu et al. [3]
+        </span>
+      </div>
+
+      <p class="lit-contribution">
+        Proposed machine learning pipelines using charging
+        voltage and current data, together with deep domain
+        adaptation methods, to estimate lithium-ion battery SOH.
+      </p>
+
+      <div class="lit-limitation">
+        Limitation: Primarily addresses current SOH estimation
+        rather than personalized 3, 6, and 12-month
+        forecasts with actionable recommendations.
+      </div>
+
+      <div class="lit-ieee">
+        [2] D. Roman, S. Saxena, V. Robu, M. Pecht,
+        and D. Flynn,
+        "Machine learning pipeline for battery
+        state-of-health estimation,"
+        <em>Nature Machine Intelligence</em>,
+        vol. 3, no. 5, pp. 447–456, 2021.
+        <a href="https://doi.org/10.1038/s42256-021-00312-3"
+           target="_blank" rel="noopener noreferrer">DOI</a>
+
+        <p>
+          [3] J. Lu, R. Xiong, J. Tian, C. Wang,
+          and F. Sun,
+          "Deep learning to estimate lithium-ion battery
+          state of health without additional degradation
+          experiments,"
+          <em>Nature Communications</em>,
+          vol. 14, Art. no. 2760, 2023.
+          <a href="https://doi.org/10.1038/s41467-023-38458-w"
+             target="_blank" rel="noopener noreferrer">DOI</a>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- 3. Battery Anomaly Detection -->
+    <div class="glass-card lit-card">
+      <div class="lit-citation">
+        <span class="lit-author">
+          Liu et al. [4], Schölkopf et al. [5],
+          Zhang et al. [6]
+        </span>
+      </div>
+
+      <p class="lit-contribution">
+        Developed Isolation Forest, One-Class SVM,
+        and interpretable Autoencoder approaches
+        applicable to anomaly detection and battery
+        fault identification.
+      </p>
+
+      <div class="lit-limitation">
+        Limitation: These methods do not inherently
+        connect fault detection to integrated EV
+        route planning and personalized maintenance advice.
+      </div>
+
+      <div class="lit-ieee">
+        [4] F. T. Liu, K. M. Ting, and Z.-H. Zhou,
+        "Isolation forest,"
+        in <em>Proc. 8th IEEE Int. Conf. Data Mining</em>,
+        2008, pp. 413–422.
+        <a href="https://doi.org/10.1109/ICDM.2008.17"
+           target="_blank" rel="noopener noreferrer">DOI</a>
+
+        <p>
+          [5] B. Schölkopf, J. C. Platt, J. Shawe-Taylor,
+          A. J. Smola, and R. C. Williamson,
+          "Estimating the support of a high-dimensional
+          distribution,"
+          <em>Neural Computation</em>,
+          vol. 13, no. 7, pp. 1443–1471, 2001.
+          <a href="https://doi.org/10.1162/089976601750264965"
+             target="_blank" rel="noopener noreferrer">DOI</a>
+        </p>
+
+        <p>
+          [6] X. Zhang, P. Liu, N. Lin, Z. Zhang,
+          and Z. Wang,
+          "A novel battery abnormality detection method
+          using interpretable Autoencoder,"
+          <em>Applied Energy</em>,
+          vol. 330, Art. no. 120312, 2023.
+          <a href="https://doi.org/10.1016/j.apenergy.2022.120312"
+             target="_blank" rel="noopener noreferrer">DOI</a>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- 4. Intelligent EV Mobility -->
+    <div class="glass-card lit-card">
+      <div class="lit-citation">
+        <span class="lit-author">
+          Ma &amp; Faye [7], Houalef et al. [8]
+        </span>
+      </div>
+
+      <p class="lit-contribution">
+        Investigated hybrid LSTM networks for charging
+        station occupancy prediction and personalized
+        energy-aware EV routing with charging recommendations.
+      </p>
+
+      <div class="lit-limitation">
+        Limitation: These studies do not provide a complete
+        mobile decision-support system integrating battery
+        health forecasting, anomaly detection, queue
+        prediction, and driver assistance.
+      </div>
+
+      <div class="lit-ieee">
+        [7] T.-Y. Ma and S. Faye,
+        "Multistep electric vehicle charging station
+        occupancy prediction using hybrid LSTM neural
+        networks,"
+        <em>Energy</em>, vol. 244,
+        Art. no. 123217, 2022.
+        <a href="https://doi.org/10.1016/j.energy.2022.123217"
+           target="_blank" rel="noopener noreferrer">DOI</a>
+
+        <p>
+          [8] A.-R. Houalef, F. Delavernhe,
+          S.-M. Senouci, and E.-H. Aglzim,
+          "Data-driven, personalized route planning for
+          connected electric vehicles: Optimizing time,
+          energy, and charging stops,"
+          <em>Applied Energy</em>, vol. 402,
+          Art. no. 126887, 2025.
+          <a href="https://doi.org/10.1016/j.apenergy.2025.126887"
+             target="_blank" rel="noopener noreferrer">DOI</a>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- 5. RAG and Dense Passage Retrieval -->
+    <div class="glass-card lit-card"
+         style="grid-column: span 2;">
+
+      <div class="lit-citation">
+        <span class="lit-author">
+          Lewis et al. [9] &amp; Karpukhin et al. [10]
+          — NeurIPS / EMNLP
+        </span>
+      </div>
+
+      <p class="lit-contribution">
+        Introduced Retrieval-Augmented Generation (RAG)
+        and Dense Passage Retrieval (DPR) for grounding
+        language model responses in retrieved external
+        knowledge and improving factual reliability.
+      </p>
+
+      <div class="lit-limitation">
+        Limitation: These general-purpose retrieval and
+        generation methods do not inherently incorporate
+        real-time EV telemetry or personalized battery
+        health predictions.
+      </div>
+
+      <div class="lit-ieee">
+        [9] P. Lewis et al.,
+        "Retrieval-augmented generation for
+        knowledge-intensive NLP tasks,"
+        in <em>Advances in Neural Information Processing
+        Systems</em>, vol. 33, pp. 9459–9474, 2020.
+        <a href="https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+           target="_blank" rel="noopener noreferrer">
+          Paper
+        </a>
+
+        <p>
+          [10] V. Karpukhin et al.,
+          "Dense passage retrieval for open-domain
+          question answering,"
+          in <em>Proc. 2020 Conf. Empirical Methods
+          in Natural Language Processing (EMNLP)</em>,
+          pp. 6769–6781, 2020.
+          <a href="https://doi.org/10.18653/v1/2020.emnlp-main.550"
+             target="_blank" rel="noopener noreferrer">DOI</a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
       <!-- Sub-Tab 2: Research Gap & Problem -->
       <div class="domain-pane" id="tab-gap">
@@ -1638,12 +1795,209 @@
           </a>
         </div>
 
+<div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
 
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Research paper</h3>
+            </div>
+          </div>
 
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad9" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad9" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad9)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad9)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
 
+          <a href="assets/pdf/research_paper.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
 
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
 
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>TAF</h3>
+            </div>
+          </div>
 
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad9" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad9" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad9)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad9)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/TAF_R029.pdf" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="glass-card doc-card">
+          <div class="doc-corner-glow"></div>
+
+          <div class="doc-header">
+            <div class="doc-icon-badge">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <line x1="8" y1="13" x2="16" y2="13" />
+                <line x1="8" y1="17" x2="13" y2="17" />
+              </svg>
+            </div>
+            <div class="doc-header-text">
+              <h3>Check LIST</h3>
+            </div>
+          </div>
+
+          <div class="doc-pdf-stage">
+            <div class="doc-radar-ring">
+              <span class="doc-dot dot-red-1"></span>
+              <span class="doc-dot dot-red-2"></span>
+              <span class="doc-dot dot-blue-1"></span>
+            </div>
+            <div class="doc-pdf-file-icon">
+              <svg width="86" height="110" viewBox="0 0 86 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="pageGrad9" x1="0" y1="0" x2="86" y2="110" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#f8fafc" />
+                  </linearGradient>
+                  <linearGradient id="redGrad9" x1="0" y1="0" x2="86" y2="0" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#dc2626" />
+                    <stop offset="100%" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+                <path d="M8 0C3.58 0 0 3.58 0 8V102C0 106.42 3.58 110 8 110H78C82.42 110 86 106.42 86 102V24L62 0H8Z"
+                  fill="url(#pageGrad9)" />
+                <path d="M62 0V16C62 20.42 65.58 24 70 24H86L62 0Z" fill="#e2e8f0" />
+                <path d="M62 0L86 24" stroke="rgba(0,0,0,0.06)" stroke-width="1" />
+                <path
+                  d="M43 31C38.2 31 34.8 35.5 32.8 41C30.8 46.5 28.2 54.8 24 58.8C27.2 56.8 31.8 52.5 34.4 47.6C36.8 43.1 40.2 38 44.4 38C47.2 38 49 40.2 48.1 43.3C46.4 49.8 38.4 57 31.2 61.4C26.8 64.1 23.2 66.5 23.2 69.8C23.2 73.5 27.5 74.3 31 74.3C37.2 74.3 44.2 68.2 49 62C54.3 55.4 59.5 47.5 63.8 44C60.8 40.9 55.5 39.6 50.6 39.6C47.6 39.6 45 40.9 43.2 42.7C41.7 44.1 40.8 45.6 39.8 45.6C38.9 45.6 38.4 44.6 38.4 43.7C38.4 40.2 41.8 35.4 45.7 33.5C44.8 31.8 43.9 31 43 31Z"
+                  fill="#e11d48" />
+                <path d="M0 72H86V102C86 106.42 82.42 110 78 110H8C3.58 110 0 106.42 0 102V72Z" fill="url(#redGrad9)" />
+                <text x="43" y="96" font-family="'Inter', sans-serif" font-size="18" font-weight="900" fill="#ffffff"
+                  text-anchor="middle" letter-spacing="1.5">PDF</text>
+              </svg>
+            </div>
+          </div>
+
+          <a href="assets/pdf/R26-IT-029-Electric Vehicle Management System Using Artificial Intelligence and Machine Learning.xlsx" target="_blank" rel="noopener noreferrer"
+            class="doc-view-btn-custom">
+            <span class="btn-inner">
+              <svg class="eye-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+              <span>View</span>
+            </span>
+            <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
 
 
       </div>
@@ -1651,6 +2005,8 @@
 
 
     </div>
+
+
   </section>
 
   <!-- ========================================================================
